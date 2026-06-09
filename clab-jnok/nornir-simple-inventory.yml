@@ -1,0 +1,61 @@
+---
+l1:
+    username: admin
+    password: admin@123
+    platform: juniper_vjunosswitch
+    hostname: 172.20.20.7
+l2:
+    username: admin
+    password: admin@123
+    platform: juniper_vjunosswitch
+    hostname: 172.20.20.5
+l3:
+    username: admin
+    password: admin@123
+    platform: juniper_vjunosswitch
+    hostname: 172.20.20.9
+s1:
+    username: admin
+    password: admin@123
+    platform: juniper_vjunosswitch
+    hostname: 172.20.20.4
+s2:
+    username: admin
+    password: admin@123
+    platform: juniper_vjunosswitch
+    hostname: 172.20.20.10
+h1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.11
+h11:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.8
+h12:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+h2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.13
+h22:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+h3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.12
+h33:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2

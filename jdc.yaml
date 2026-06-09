@@ -1,0 +1,51 @@
+name: jnok
+prefix: ""
+topology:
+  kinds:
+    juniper_vjunosswitch:
+      image: jswitch:latest
+    linux:
+      type: linux
+      image: ghcr.io/hellt/network-multitool
+  nodes:
+    s1:
+      kind: juniper_vjunosswitch
+    s2:
+      kind: juniper_vjunosswitch
+    l1:
+      kind: juniper_vjunosswitch
+    l2:
+      kind: juniper_vjunosswitch
+    l3:
+      kind: juniper_vjunosswitch
+    h1:
+      kind: linux
+    h11:
+      kind: linux
+    h12:
+      kind: linux
+    h2:
+      kind: linux
+    h22:
+      kind: linux
+    h3:
+      kind: linux
+    h33:
+      kind: linux
+  links:
+    - endpoints: [ "s1:eth1", "l1:eth1" ]
+    - endpoints: [ "s1:eth2", "l2:eth1" ]
+    - endpoints: [ "s1:eth3", "l3:eth1" ]
+
+    - endpoints: [ "s2:eth1", "l1:eth2" ]
+    - endpoints: [ "s2:eth2", "l2:eth2" ]
+    - endpoints: [ "s2:eth3", "l3:eth2" ]
+
+    - endpoints: [ "l1:eth3", "h1:eth1" ]
+    - endpoints: [ "l1:eth4", "h11:eth1" ]
+    - endpoints: [ "l2:eth3", "h2:eth1" ]
+    - endpoints: [ "l2:eth4", "h22:eth1" ]
+    - endpoints: [ "l3:eth3", "h3:eth1" ]
+    - endpoints: [ "l3:eth4", "h33:eth1" ]
+    - endpoints: [ "l1:eth5", "h12:eth1" ]
+    - endpoints: [ "l2:eth5", "h12:eth2" ]
